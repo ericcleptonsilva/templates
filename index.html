@@ -1,0 +1,126 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//PT-BR" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vouchers</title>
+    <style>
+        body {
+            max-width: 100%;
+            background-color: aliceblue;
+            padding-top: 20px;
+            grid-template-columns: 1fr 1fr 1fr;
+            display: grid;
+
+
+        }
+
+        .card {
+            display: flex;
+            border-style: solid;
+            border-color: black;
+            padding: 10px 10px 10px 10px;
+            width: 330px;
+            height: 110px;
+        }
+
+        div {
+            position: relative;
+            justify-content: center;
+            margin-left: 5px;
+            margin-top: 6px;
+
+        }
+
+        img {
+            position: relative;
+            top: 10px;
+            width: 90px;
+            height: 95px;
+            background-repeat: no-repeat;
+            background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFwAAABcCAMAAADUMSJqAAABelBMVEX////uqTT+/v4AAADwqjLyqzDzrC7upinupy7toxjr6+vvrD/tpB7upzT7+/t7e3vy8vLNzc7h4eH1z53CwsI9PT5jY2PtoQnx8fbsqYvibijhZxfngEjwslGOjo+dnZ2rq6tubm5PT1D65s3327f77dz21akfHyDj4+1aWloLCw2EhbYWGokAAIQrKyzywXv99/DIkVWxg2Q9P5Wzs9Cen8Q1N5IlKI2oqcrwtVy3t7f0yY7Qlk9rWYfen0P5sCe7iV6MbHhZTotmZ6ZYWaAIDobOzuB2d67xu2y86NTok2r66ePicjfzybjiYgB4YoVQSY+je3AAKJ+WcnKBZn0YM6C6qGfKmzbAzrGxy7zY0LTF28Xb9u3PtmzWxJKtyp26tW6H1bqIxJjdxbFmzqWj4MPLoGKPtXFMwI0ks3NIU6e80tBiuo6Tw6nutZ722M2Uc5PqkzbQd13ciEHXubmQg5+TjG6Tg3Sjm2Z8c4DQykvCvVK1tl9oaIkZtYfzAAAK90lEQVRoge2Z+V/bRhbAR7dtCeEzEiYY3xaW8X0En8IYm8tgCtk227SbtEk3Sbew7VIgEP73fSNLvuojadMf9rN9fLDlGfmrN2/eMTNG6C/5Pxaf709D24IUFbT9KWhxnYq73XFqXfwDEH+wPLU5SQXsCNkDVNI/rb8cnNo8Lg4qSVHLbvtom+j0UdSGA5GpFIkcGxTlc46pb3cvU/A1xyK2PZ4UHXBrPOgrO5w2u83p9gfgcQH4ZpjgOCIMzw8AKuB3692Osi8YB3UcYjJun88WPXEbIuH768EYZUpyuQxNYV6gCYIWeMCT5eXkoDsWXIcnk8gW98yfjgCMrcJVQrotHO5yuQz6wYeIi7cCGgtt5V0RaIIx4W6HbqFQaisCFg3MY69TfhSWCE7gtlyhiDGYSDjFC1wfrb/SnMCnwhFDzUjItSVha5HIT63PZrupZRSx6hQLJ0iShed5TrIaZJol2DprqM8JVomDboskCX00CFqm3LPYTiqI0hZj9MRQU+Oymm3UeqfsZDcnREkdDXAUpJzT2WIsZkdrFmKGsNWn1V692SAIZuSRnOASDTSm22Ox6ZO6AU9NCdPJNNuoNrfPtmv1Bt3QqoyJlipp3SLI1N1JbUxjY3u5pBnoevYLLXfWbDTYJnGyXew3W4RU2jA2Ukw6nrdpirtRdCqc4TUtpzUzWqPK1nvbme2mBqpbpL2IoTASW7t5ZMKnqr6Bffy3ZgGD1HrZXkZjmcYJX6wWtRrPEhbrVsTUGqZrt7NbwB/B16eyEemB+N2amFCazdbq56e9Os8wjbNs7ax3DmanrWuhgUFUlUS5fGFXRTh7eMjp7mKLgytaR8zBMGw1U2O18zOWoZnsWY3vVessTQhEyDSIrBY7iTzaaRVbWPdgfGa+d1M+FB0Yhslo1XouWzw5bbAsz9Ps9tNqncbo6NAghd22UlKQWmrDnCLf7CDCHuM0PB2HY6aoNbM9HqKS0U5y0JQBNMSMaE5jQUFiLlcs9dqFHP66c6qnmCLGgiiEPYap1rRM8+T0pMYzbINmte3aGUtgdEUcqN0pgb75RLtdzLX12QzOiCBDyjAuUJ2uf6GdZ3LbJyzLsFqzztSfZnkavM90bBLlFVTYUcHcxSKS9bGAVafWsKF4QHWYU/akV89qWgOCXjvfboIXsrTFupceRKKy2UH5klJMFNoF0QjSoGc+G1R3krpZnvbAsdmGliNOzrf50Zjpozq7SruUKHSwA/at5FykOCJhTlIcqJ5hwUXOS9VivVptQMysDbxPaWP7yqWOAmFpPi8dBm+Y4eJDCcRRGHsjw/LZ6ul2T6uyEDN8eGCQdgIzSVEtyqqRURDpksIoPrcO6eKnbHq9YLTmOYRjFceMidZdQtktJFTUypVUU20yCqUjYoMqtkic4C8YTteL2Ro8gxAs0UE4ylDL5M12J6G21bbRiCs3QVjBV2bUiRHBCnA4jBrnNYYeFgPoAjMDXMwVe2pOMccS0hcFBIeHvBBuj60jHt9O89sMxIyZsUnAqQl4gTyC0AC91l8U0Dxajy1YtozCCboxEjPyO4gXeXcH5TuqmbpRZMtqJNGPhGOz6GyImZGMDSaBrFcoFUsFszGyJw3zM/1RZjEm1CINi4HS6cio1AYnERMF2YiZdErgRvL+x00o3JO20qMxs1PqFHOo1SrtJJ4gE12RRtEATzvnpVtDfBTkRT40NIiy24HAyatFBZkuQro4YWx5QxBCCFGLtx2eDeQaOLZdVfs+klALO8h8YJgTLH/7kh+Dcy60sShv6fNJmt4AeQ9cWy7tPNlsywM0L1iEr579fbzYWrY+Ykb9MC1GpD8poPZuu7SDCol+Meg7tkBz/NfPn1sm7MKB0f2LrBI0zCqinZIib+ZbiZySH6C3JAstfLP//Pm3k2sQIbwwn+OnY4qYU6EeqGSu9AQXA9OxIWY44h/7+8+/+nJC8b5d5jujj8Jh1m6jTkJG6qb8Dqc+07EhZmjuxcvX+/v733LEpEhp+wJ/iUFOVlqbu7ICaTW/qeRxHsSSruCY4b787uVrgH9jnVRc95dAbB7bjXdkJVVUVFlNtPQ1FJhIlpXv60vg2sKLV68A/uyHap0XBGYcDunFMTeONjy49LaVzaKKCjhjI1FRFBmquyw7v6/+E9gvf3r2IyL1jxOBZA3hIJkpNn1PA6lPNNIqkhWyb3T8+uoNhr+2GR9Re2l8SlOwp5rt6rqToye7rVZO7gdSXh5uG757A/DXTrOYwpOz45aR0DxXhwDWS7Ca7wcpzO0Ajvbfvnnz5jvnyB5FflcfMwy4+my72MEqZrrqO/YPOyYc2d6+ffPqRzRkA7w1DrfsgV1mVQwH+Mrwqyi9Z60P4f96+/a1qIywAb4zDido0jHzAGCdGmzM+jFDVzsGHH39dl8c7nxmwK0RcuY295FnsJ8kKxyHF3VqH46cP+HGSXhnAi5EkefRDHgyYC68Xf06o8Ox2IykoRh3GnV1Es6lUCA5Aw7LRF3tKGGkPCajXhwcXKSRfQXLJVL095UuWA06Vv5dHYfDjC5Ts+A+nEhCxCCb0vUjLxaRPPbC1XFXeYw/rq6gQ+8qvvqZmIT75sDxKmdk9o+OHh8ePvZ20Sr8H3gPAH4hgqDH3oO0uPLLf36j+Wz4MqpIo9WLPgImAhYJcHjICsAPwCyH4rH3EqWdhU8wiyeAKmN5WofjuSNXj1aPV72HyuMjEO9lenX1EkHL0Xh24SooMKsaQUdYmIBfIHQBM7nqXbm8TCNsFuwqMAdd1L3wTsBx/M9apEP5To+Xxp+Pjrpd7+qFbnMQgK90u91LsP/R5eHKb+Dp2Yt0nHFTo3ZhtF9WQQ4QOj7u6gv/I+/q8fHxAUo/hvdV7/iEcnNzboASSW7kfibbvupeXLbb7aurQz1CL0Hv7tUVtFxedK/ymdGcS3OkOOcIzTk84zI0L6jv3jVrJ+e/Fgp4WQQRKrcLv/56flJrvmup6hjcGtF34DMFn86FrJYh/Fyrs33hqqd5WZGfZOuC0VLXTkbgtBSafzoHuQtKbIQY2J1tMLT5fZoVMlcZKzswG82wQ7aFi0B5n5W1+kIGYaea3ur7DL0Ef3TGQi8tMUv4mhUs+ApfL+FWuDD9ZC0N++Pgoo3oI5wEojjh0vXrm9ubh9ub5evbs9ub97fXNzfX1++vb29u8cv7m9vra00/CbRYXXg9NV9vXXz4AD6dslrozIfbu/vbuw8f7u9q93f3d/B+/2H57v7mFl/d390u311D0qXxiZQt+BHLcxB3DM8LbKZYTcti0U7fL79/eLiuPbw/eTh7qN3WHvQO3L0EW+AQ9oTY4n2FLvYA5XHgHabEMox+FvUC64y1/XAPcvfhBd/vYVhBwGfeHv3g/iMF7t5w6vlXd0t9CP1RGO/9sKf1Eynnhq7LJ4g/Tj3S8XoOZvjUlmSVpC1JkPbwgPrTiM8EnI+ouP+T0CDkeszAg/b0WtoVjobCoWg0HHWF8HbIIuANH6Bj6wtPQqaICPgN/GsC4Neia2EXSLQSDbuiPD7aAbRjA9C/98cX0h+jPG68x7IKFmvKFQK996wcx+mba7eHivl/j9YDKXsoT1nfwnEVV6QSiYYFi5SKINLo+IMCCuJfhmDzyfEcsdbX2p/Uh/QZBEwbh/FHwfP0aBTBlTY+zfnm4oNUsoxPsqzgfOUkFfx8aBPvQGkSOT47Gos7SQVEMUAlP4+tJwWyU2x+rfkjYgv+ST+H/iX/G/JfvOuVYms5BgoAAAAASUVORK5CYII=");
+
+        }
+
+        .title {
+            position: relative;
+            left: 10px;
+            top: 10px;
+        }
+
+        .title1 {
+            position: absolute;
+            color: black;
+        }
+
+
+        .descricao-wifi {
+            position: relative;
+            top: 10px;
+            left: 15px;
+        }
+
+        .descricao-login {
+            position: relative;
+            top: 10px;
+            left: auto;
+            right: 45px;
+
+
+        }
+
+        .descricao-senha {
+            position: relative;
+            top: 10px;
+            left: auto;
+            right: 45px;
+        }
+
+        @media print {
+            .noprint {
+                display: none;
+            }
+
+            .pagebreak {
+                page-break-after: always;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <table align="center" style="color: black; font-size: 15px;">
+            <b class="title1">COLÉGIO GUADALAJARA</b>
+            <tr>
+                <td class="title">Senha do WIFI:</td>
+                <td class="descricao-wifi">
+                    <b>Pais2024@</b>
+                </td>
+            </tr>
+            <tr>
+                <div class="container">
+                    <img>
+                </div>
+                <td class="title">Login: </td>
+                <td class="descricao-login"><b>%u_username%</b></td>
+            </tr>
+
+            <tr>
+                <td class="title"> Senha:</td>
+                <td class="descricao-senha">
+                    <b>%u_password%</b>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+
+    
+
+</body>
+
+</html>
+<p class="noprint" style="font-size: 10px"> ................ page break ................ </p>
+<p class="pagebreak">&nbsp;</p>
